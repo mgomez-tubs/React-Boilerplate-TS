@@ -65,6 +65,7 @@ module.exports = (env) => {
     },
     devServer: {
       hot: true,
+      clientLogLevel: "silent",
       contentBase: "./dist",
     },
     resolve: {
