@@ -1,5 +1,6 @@
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const path = require('path');
 
 module.exports = (env) => {
   const isDevelopment = env.development || false;
@@ -8,8 +9,16 @@ module.exports = (env) => {
   }
   return {
     mode: isDevelopment ? "development" : "production",
+    entry: "./src/index.tsx",
     module: {
       rules: [
+        {
+          test: /\.tsx?$/,
+          use: {
+            loader: "babel-loader",
+          },
+          exclude: /node_modules/,
+        },
         {
           test: /\.s[ac]ss$/i,
           use: [
@@ -58,6 +67,9 @@ module.exports = (env) => {
       hot: true,
       contentBase: "./dist",
     },
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
+    },
     plugins: [
       isDevelopment && new ReactRefreshWebpackPlugin(),
       options.generateBundleAnalyzer && new BundleAnalyzerPlugin(),
@@ -65,6 +77,6 @@ module.exports = (env) => {
     devtool: "eval-source-map",
     optimization: {
       usedExports: true,
-    }
+    },
   };
 };
