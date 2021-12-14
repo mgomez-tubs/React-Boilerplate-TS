@@ -6,7 +6,7 @@ Very simple React boilerplate with development hot reloading (see package.json).
 - Hot reloading through react-refresh-webpack-plugin
 - Scss/ Sass support
 - Webpack 5
-- Eslint using the [Create React App default linter](https://www.npmjs.com/package/eslint-config-react-app).
+- Eslint using the Create React App [default linter](https://www.npmjs.com/package/eslint-config-react-app).
 
 ### Usage
 - Don't forget to install all dependencies first.
