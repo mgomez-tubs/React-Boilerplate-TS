@@ -1,6 +1,6 @@
 # Simple React+Typescript Boilerplate
 
-Very simple React boilerplate with development hot reloading (see package.json).
+Very simple React boilerplate with development server hot reload (see package.json).
 
 ### Features
 - Hot reloading through react-refresh-webpack-plugin
