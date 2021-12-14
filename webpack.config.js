@@ -1,5 +1,6 @@
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const ESLintPlugin = require('eslint-webpack-plugin');
 const path = require('path');
 
 module.exports = (env) => {
@@ -73,6 +74,7 @@ module.exports = (env) => {
     },
     plugins: [
       isDevelopment && new ReactRefreshWebpackPlugin(),
+      isDevelopment && new ESLintPlugin(),
       options.generateBundleAnalyzer && new BundleAnalyzerPlugin(),
     ].filter(Boolean),
     devtool: "eval-source-map",
