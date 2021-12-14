@@ -1,4 +1,4 @@
-# Simple React Boilerplate (using Typescript)
+# Simple React+Typescript Boilerplate (including ESLint)
 
 Very simple React boilerplate with development hot reloading (see package.json).
 
