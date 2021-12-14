@@ -1,4 +1,4 @@
-# Simple React Boilerplate
+# Simple Typescript React Boilerplate
 
 Very simple React boilerplate with development hot reloading (see package.json).
 
